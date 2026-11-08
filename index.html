@@ -607,6 +607,14 @@
       <div class="google-btn">RATE US ★</div>
     </a>
 
+    <!-- 3.5 Custom Dynamic Buttons -->
+    <div id="custom-buttons-wrap" style="display:none;margin-bottom:16px;">
+      <div class="section-label">
+        <span id="custom-buttons-label">FEATURED LINKS</span>
+      </div>
+      <div class="social-list" id="custom-buttons-container"></div>
+    </div>
+
     <!-- 4. Social Media (Instagram, TikTok, Facebook) -->
     <div class="section-label">
       <span>FOLLOW MAX DAILY</span>
@@ -749,6 +757,29 @@
 
       document.getElementById('google-rating-num').textContent = HUB_DATA.google_review.rating;
       document.getElementById('google-review-card').href = HUB_DATA.google_review.review_url;
+
+      // Render Custom Dynamic Buttons
+      const customWrap = document.getElementById('custom-buttons-wrap');
+      const customContainer = document.getElementById('custom-buttons-container');
+      if (HUB_DATA.custom_buttons && HUB_DATA.custom_buttons.length > 0) {
+        customWrap.style.display = 'block';
+        customContainer.innerHTML = HUB_DATA.custom_buttons.map((btn, i) => `
+          <a class="social-row" href="${btn.url}" target="_blank" rel="noopener" style="border-left: 3px solid var(--gold-deep);">
+            <div class="social-left">
+              <div class="social-icon" style="background:var(--cream-bg);color:var(--espresso);border:1px solid var(--border-gold);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <div>
+                <div class="social-name">${btn.title}</div>
+                <div class="social-handle">${btn.subtitle || btn.url.replace(/^https?:\/\//, '')}</div>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+        `).join('');
+      } else {
+        customWrap.style.display = 'none';
+      }
 
       const socialContainer = document.getElementById('socials-container');
       socialContainer.innerHTML = HUB_DATA.social_media.map(soc => `
