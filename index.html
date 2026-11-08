@@ -3,34 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>MAX DAILY — Digital Hub | Specialty Coffee & Bakery</title>
-  <meta name="description" content="MAX DAILY — Specialty Coffee & Bakery. A Daily Dose of Positivity. View our digital menu, websites, social media, location, and rate us on Google." />
-  <meta name="theme-color" content="#1A120D" />
+  <title>MAX DAILY — Specialty Coffee &amp; Bakery</title>
+  <meta name="description" content="MAX DAILY — Specialty Coffee & Bakery. A Daily Dose of Positivity. Official Website, Digital Menu, Social Media, Google Rating & Contact." />
+  <meta name="theme-color" content="#F4E9DC" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <!-- Self-contained, zero-blocking-dependencies -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
+      --cream-bg: #F4E9DC;
+      --cream-soft: #FAF4EC;
+      --warm-beige: #E9DDCD;
+      --kraft: #DFCBB2;
       --espresso: #1A120D;
-      --espresso-deep: #110B08;
-      --charcoal: #241912;
-      --charcoal-light: #2E2017;
+      --espresso-card: #221710;
       --coffee-brown: #77583C;
       --gold: #D9AE7B;
-      --gold-bright: #E6BF8E;
-      --gold-deep: #B88952;
-      --warm-beige: #E9DDCD;
-      --cream: #F4E9DC;
-      --kraft: #E4D0B5;
-      --border-gold: rgba(217, 174, 123, 0.28);
-      --border-gold-strong: rgba(217, 174, 123, 0.58);
-      --glass-bg: rgba(36, 25, 18, 0.84);
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --radius-sm: 12px;
+      --gold-deep: #B5854B;
+      --border-gold: rgba(181, 133, 75, 0.32);
+      --border-espresso: rgba(26, 18, 13, 0.1);
+      --shadow-luxury: 0 14px 34px rgba(26, 18, 13, 0.08);
+      --shadow-card: 0 6px 20px rgba(26, 18, 13, 0.06);
       --transition: cubic-bezier(0.22, 1, 0.36, 1);
-      --shadow-elevated: 0 20px 50px rgba(0, 0, 0, 0.55);
     }
 
     * {
@@ -40,1244 +34,640 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      background-color: var(--espresso-deep);
+      background-color: var(--cream-bg);
       background-image:
-        radial-gradient(circle at 50% 0%, rgba(217, 174, 123, 0.14) 0%, transparent 55%),
-        radial-gradient(circle at 15% 85%, rgba(119, 88, 60, 0.14) 0%, transparent 50%),
-        linear-gradient(180deg, #160F0A 0%, #110B08 100%);
-      color: var(--cream);
+        radial-gradient(circle at 50% 0%, rgba(217, 174, 123, 0.22) 0%, transparent 55%),
+        linear-gradient(180deg, #F7EFE4 0%, #F4E9DC 100%);
+      color: var(--espresso);
       font-family: 'Montserrat', sans-serif;
       line-height: 1.5;
       min-height: 100vh;
       overflow-x: hidden;
-      padding-bottom: 90px;
     }
 
-    /* Subtle architectural arch background watermark */
-    .bg-arch-frame {
-      position: fixed;
-      inset: 14px;
-      max-width: 500px;
+    .hub-container {
+      max-width: 460px;
       margin: 0 auto;
-      border: 1px solid rgba(217, 174, 123, 0.1);
-      border-radius: 240px 240px 28px 28px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Main Mobile Container */
-    .hub-shell {
-      position: relative;
-      z-index: 1;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 20px 18px 40px;
-    }
-
-    /* Top Floating Utility Bar */
-    .top-utility-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 13px;
-      background: rgba(26, 18, 13, 0.85);
-      border: 1px solid var(--border-gold);
-      border-radius: 999px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--warm-beige);
-      backdrop-filter: blur(12px);
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #4ADE80;
-      box-shadow: 0 0 10px #4ADE80;
-      animation: pulseDot 2s infinite;
-    }
-
-    @keyframes pulseDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.55; transform: scale(1.2); }
-    }
-
-    .top-actions {
-      display: flex;
-      gap: 8px;
-    }
-
-    .icon-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 1px solid var(--border-gold);
-      background: rgba(36, 25, 18, 0.85);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: all 0.25s var(--transition);
-    }
-
-    .icon-btn:hover, .icon-btn:active {
-      background: var(--gold);
-      color: var(--espresso-deep);
-      transform: translateY(-2px);
+      padding: 24px 18px 36px;
     }
 
     /* ==========================================================================
-       HERO BRAND ARCH HEADER
+       1. LUXURY ESPRESSO ARCH HEADER WITH VERTICAL STACKED LOGO
        ========================================================================== */
-    .hero-arch-card {
+    .hero-arch {
       position: relative;
-      background: linear-gradient(180deg, rgba(36, 25, 18, 0.92) 0%, rgba(26, 18, 13, 0.96) 100%);
-      border: 1.5px solid var(--border-gold-strong);
-      border-radius: 190px 190px 26px 26px;
-      padding: 34px 22px 26px;
+      background: linear-gradient(180deg, #1E140E 0%, #160E09 100%);
+      border: 2px solid var(--gold);
+      border-radius: 180px 180px 26px 26px;
+      padding: 38px 24px 26px;
       text-align: center;
-      box-shadow: var(--shadow-elevated), inset 0 1px 24px rgba(217, 174, 123, 0.08);
+      box-shadow: 0 18px 40px rgba(26, 18, 13, 0.18);
       margin-bottom: 18px;
       overflow: hidden;
     }
 
-    .hero-arch-card::before {
+    .hero-arch::before {
       content: "";
       position: absolute;
-      inset: 6px;
-      border: 1px dashed rgba(217, 174, 123, 0.22);
-      border-radius: 184px 184px 20px 20px;
+      inset: 7px;
+      border: 1px solid rgba(217, 174, 123, 0.28);
+      border-radius: 173px 173px 20px 20px;
       pointer-events: none;
     }
 
-    .brand-logo-wrap {
-      position: relative;
-      width: 118px;
-      height: 118px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      padding: 4px;
-      background: radial-gradient(circle, rgba(217, 174, 123, 0.25), transparent 70%);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
-    }
-
-    .brand-logo-svg {
-      width: 100%;
-      height: 100%;
+    /* MAX_DAILY_vertical_stacked_cream_gold_transparent */
+    .stacked-logo-svg {
+      width: 200px;
+      height: auto;
+      margin: 0 auto 10px;
       display: block;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
     }
 
-    .verified-badge {
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
+    .gold-divider-bar {
+      width: 64px;
+      height: 3px;
       background: var(--gold);
-      color: var(--espresso-deep);
-      border: 2.5px solid var(--espresso);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-
-    .brand-title {
-      font-size: 26px;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      color: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 4px;
+      margin: 8px auto 12px;
+      border-radius: 2px;
     }
 
     .brand-subtitle {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
-      letter-spacing: 0.22em;
-      color: var(--gold);
+      letter-spacing: 0.24em;
+      color: var(--warm-beige);
       text-transform: uppercase;
       margin-bottom: 12px;
     }
 
-    .brand-slogan-banner {
+    .brand-slogan-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 16px;
-      background: rgba(217, 174, 123, 0.12);
-      border: 1px solid rgba(217, 174, 123, 0.35);
+      padding: 6px 16px;
+      background: rgba(217, 174, 123, 0.13);
+      border: 1px solid rgba(217, 174, 123, 0.42);
       border-radius: 999px;
-      font-size: 10.5px;
+      font-size: 9.5px;
       font-weight: 800;
       letter-spacing: 0.16em;
-      color: var(--cream);
+      color: var(--cream-bg);
       text-transform: uppercase;
     }
 
-    /* Quick Action Bar (Call, WhatsApp, Wi-Fi, Map) */
-    .quick-pills-grid {
+    /* ==========================================================================
+       2. PRACTICAL PRIMARY ACTIONS: WEBSITE & DIGITAL MENU
+       ========================================================================== */
+    .primary-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
-    .quick-pill {
+    .primary-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 11px 6px;
-      background: rgba(17, 11, 8, 0.65);
-      border: 1px solid var(--border-gold);
-      border-radius: 14px;
-      color: var(--cream);
+      text-align: center;
+      padding: 20px 14px;
+      background: var(--cream-soft);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 20px;
       text-decoration: none;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
+      color: var(--espresso);
+      box-shadow: var(--shadow-card);
+      transition: all 0.24s var(--transition);
       cursor: pointer;
-      transition: all 0.22s var(--transition);
     }
 
-    .quick-pill svg {
-      color: var(--gold);
-      transition: transform 0.22s var(--transition);
-    }
-
-    .quick-pill:hover, .quick-pill:active {
-      background: rgba(217, 174, 123, 0.16);
+    .primary-card.dark-accent {
+      background: var(--espresso);
+      color: var(--cream-bg);
       border-color: var(--gold);
-      transform: translateY(-2px);
     }
 
-    .quick-pill:hover svg {
-      transform: scale(1.12);
+    .primary-card:hover, .primary-card:active {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-luxury);
+      border-color: var(--gold-deep);
+    }
+
+    .primary-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 10px;
+      background: rgba(217, 174, 123, 0.2);
+      color: var(--espresso);
+      border: 1px solid var(--border-gold);
+    }
+
+    .primary-card.dark-accent .primary-icon-box {
+      background: rgba(217, 174, 123, 0.15);
+      color: var(--gold);
+      border-color: rgba(217, 174, 123, 0.35);
+    }
+
+    .primary-card-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .primary-card-sub {
+      font-size: 10.5px;
+      font-weight: 600;
+      opacity: 0.72;
     }
 
     /* ==========================================================================
-       GOOGLE RATING & REVIEW SPOTLIGHT CARD
+       3. GOOGLE RATING SPOTLIGHT CARD
        ========================================================================== */
-    .google-rate-card {
-      position: relative;
+    .google-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      padding: 18px 20px;
-      background: linear-gradient(135deg, #2A1D14 0%, #1B120C 100%);
-      border: 1.5px solid var(--gold);
-      border-radius: var(--radius-md);
+      gap: 12px;
+      padding: 16px 18px;
+      background: var(--cream-soft);
+      border: 1.5px solid var(--gold-deep);
+      border-radius: 20px;
       text-decoration: none;
-      color: var(--cream);
+      color: var(--espresso);
+      box-shadow: var(--shadow-card);
       margin-bottom: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 25px rgba(217, 174, 123, 0.12);
-      transition: all 0.25s var(--transition);
-      overflow: hidden;
+      transition: all 0.24s var(--transition);
     }
 
-    .google-rate-card::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 40%;
-      height: 200%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-      transform: rotate(25deg);
-      animation: shimmerSweep 5s infinite;
-      pointer-events: none;
-    }
-
-    @keyframes shimmerSweep {
-      0% { left: -60%; }
-      35%, 100% { left: 140%; }
-    }
-
-    .google-rate-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 32px rgba(217, 174, 123, 0.24);
+    .google-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-luxury);
+      background: #FFFFFF;
     }
 
     .google-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 13px;
     }
 
-    .google-score-box {
-      background: var(--espresso-deep);
-      border: 1px solid var(--border-gold-strong);
+    .google-badge-box {
+      background: var(--espresso);
+      color: var(--cream-bg);
+      border: 1.5px solid var(--gold);
       border-radius: 14px;
-      padding: 10px 12px;
+      padding: 8px 11px;
       text-align: center;
-      min-width: 68px;
+      min-width: 64px;
     }
 
-    .google-score-num {
-      font-size: 20px;
+    .google-score {
+      font-size: 18px;
       font-weight: 900;
-      color: var(--gold-bright);
-      line-height: 1;
+      color: var(--gold);
+      line-height: 1.05;
     }
 
     .google-stars {
+      font-size: 9.5px;
       color: #FBBF24;
-      font-size: 10px;
       letter-spacing: 1px;
-      margin-top: 4px;
-    }
-
-    .google-info-title {
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      color: var(--cream);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .google-info-sub {
-      font-size: 11px;
-      color: var(--warm-beige);
-      opacity: 0.85;
       margin-top: 2px;
     }
 
-    .google-cta-badge {
+    .google-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--espresso);
+    }
+
+    .google-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coffee-brown);
+      margin-top: 2px;
+    }
+
+    .google-btn {
       padding: 9px 13px;
-      background: var(--gold);
-      color: var(--espresso-deep);
-      font-size: 10.5px;
+      background: var(--espresso);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      border-radius: 11px;
+      font-size: 10px;
       font-weight: 800;
       letter-spacing: 0.08em;
-      border-radius: 10px;
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(217, 174, 123, 0.3);
+      text-transform: uppercase;
     }
 
     /* ==========================================================================
-       SECTION HEADERS
+       4. SOCIAL MEDIA CHANNELS (INSTAGRAM, TIKTOK, FACEBOOK)
        ========================================================================== */
-    .section-header {
+    .section-label {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin: 22px 0 12px;
+      margin: 6px 0 12px;
     }
 
-    .section-header-title {
-      font-size: 11px;
+    .section-label span {
+      font-size: 10.5px;
       font-weight: 800;
       letter-spacing: 0.2em;
-      color: var(--gold);
+      color: var(--coffee-brown);
       text-transform: uppercase;
-      white-space: nowrap;
     }
 
-    .section-header-line {
-      height: 1px;
+    .section-label::after {
+      content: "";
       flex: 1;
-      background: linear-gradient(90deg, var(--border-gold-strong), transparent);
+      height: 1px;
+      background: var(--border-gold);
     }
 
-    /* ==========================================================================
-       WEBSITE & MENU LINKS STACK
-       ========================================================================== */
-    .links-stack {
+    .social-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      margin-bottom: 26px;
     }
 
-    .link-card {
+    .social-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      padding: 16px 18px;
-      background: var(--glass-bg);
+      padding: 14px 16px;
+      background: var(--cream-soft);
       border: 1px solid var(--border-gold);
-      border-radius: var(--radius-md);
+      border-radius: 16px;
       text-decoration: none;
-      color: var(--cream);
-      transition: all 0.24s var(--transition);
-      cursor: pointer;
-    }
-
-    .link-card.featured {
-      background: linear-gradient(135deg, rgba(46, 32, 23, 0.95) 0%, rgba(28, 19, 14, 0.95) 100%);
-      border-color: var(--border-gold-strong);
-    }
-
-    .link-card:hover, .link-card:active {
-      transform: translateY(-2px) scale(1.005);
-      border-color: var(--gold);
-      background: rgba(52, 36, 25, 0.92);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-    }
-
-    .link-card-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 0;
-    }
-
-    .link-icon-circle {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: rgba(217, 174, 123, 0.12);
-      border: 1px solid var(--border-gold);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .link-text-wrap {
-      min-width: 0;
-    }
-
-    .link-title-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .link-title {
-      font-size: 13.5px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      color: var(--cream);
-    }
-
-    .link-badge {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background: rgba(217, 174, 123, 0.18);
-      color: var(--gold-bright);
-      border: 1px solid rgba(217, 174, 123, 0.35);
-    }
-
-    .link-subtitle {
-      font-size: 11.5px;
-      color: var(--warm-beige);
-      opacity: 0.78;
-      margin-top: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .link-arrow {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04);
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      flex-shrink: 0;
-      transition: transform 0.22s var(--transition);
-    }
-
-    .link-card:hover .link-arrow {
-      transform: translateX(3px);
-      background: var(--gold);
-      color: var(--espresso-deep);
-    }
-
-    /* ==========================================================================
-       LOCATION & DIRECTIONS CARD
-       ========================================================================== */
-    .location-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--border-gold-strong);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .map-visual-banner {
-      position: relative;
-      height: 132px;
-      background:
-        radial-gradient(circle at 50% 50%, rgba(217, 174, 123, 0.22) 0%, transparent 65%),
-        repeating-linear-gradient(0deg, rgba(217, 174, 123, 0.06) 0px, rgba(217, 174, 123, 0.06) 1px, transparent 1px, transparent 24px),
-        repeating-linear-gradient(90deg, rgba(217, 174, 123, 0.06) 0px, rgba(217, 174, 123, 0.06) 1px, transparent 1px, transparent 24px),
-        linear-gradient(135deg, #1E150F 0%, #140D09 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border-gold);
-      overflow: hidden;
-    }
-
-    /* Stylized decorative roads */
-    .map-road-1 {
-      position: absolute;
-      width: 140%;
-      height: 12px;
-      background: rgba(217, 174, 123, 0.12);
-      border-top: 1px solid rgba(217, 174, 123, 0.25);
-      border-bottom: 1px solid rgba(217, 174, 123, 0.25);
-      transform: rotate(-14deg);
-    }
-
-    .map-road-2 {
-      position: absolute;
-      width: 10px;
-      height: 150%;
-      background: rgba(217, 174, 123, 0.1);
-      transform: rotate(22deg);
-    }
-
-    .map-pin-badge {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      background: rgba(26, 18, 13, 0.94);
-      border: 1.5px solid var(--gold);
-      border-radius: 999px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
-    }
-
-    .map-pin-pulse {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(217, 174, 123, 0.28);
-    }
-
-    .map-pin-text {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      color: var(--cream);
-    }
-
-    .location-body {
-      padding: 18px;
-    }
-
-    .location-branch-title {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--cream);
-      letter-spacing: 0.04em;
-      margin-bottom: 4px;
-    }
-
-    .location-address {
-      font-size: 12px;
-      color: var(--warm-beige);
-      opacity: 0.85;
-      margin-bottom: 10px;
-    }
-
-    .location-meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 11px;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .directions-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 13px 18px;
-      background: var(--gold);
-      color: var(--espresso-deep);
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      text-transform: uppercase;
+      color: var(--espresso);
+      box-shadow: var(--shadow-card);
       transition: all 0.22s var(--transition);
     }
 
-    .directions-btn:hover {
-      background: var(--gold-bright);
+    .social-row:hover, .social-row:active {
       transform: translateY(-2px);
+      border-color: var(--espresso);
+      background: #FFFFFF;
+    }
+
+    .social-left {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .social-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--espresso);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .social-name {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--espresso);
+    }
+
+    .social-handle {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coffee-brown);
+    }
+
+    .social-arrow {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--warm-beige);
+      color: var(--espresso);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
     }
 
     /* ==========================================================================
-       FOOTER & FLOATING ADMIN / QR BUTTON
+       5. CONTACT & LOCATION FOOTER
        ========================================================================== */
-    .hub-footer {
+    .contact-footer {
+      background: var(--espresso);
+      color: var(--cream-bg);
+      border: 1.5px solid var(--gold);
+      border-radius: 24px;
+      padding: 24px 20px 22px;
       text-align: center;
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(217, 174, 123, 0.16);
+      box-shadow: 0 16px 36px rgba(26, 18, 13, 0.16);
     }
 
-    .footer-slogan {
+    .footer-header {
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.22em;
       color: var(--gold);
-      margin-bottom: 6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
 
-    .footer-copy {
-      font-size: 10.5px;
-      color: var(--warm-beige);
-      opacity: 0.6;
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+      text-align: left;
     }
 
-    /* Floating Bottom Bar for Quick Menu & QR / Edit Studio */
-    .floating-dock {
-      position: fixed;
-      bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 90;
+    .contact-item {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      background: rgba(20, 13, 9, 0.94);
-      border: 1.5px solid var(--border-gold-strong);
-      border-radius: 999px;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(16px);
+      gap: 12px;
+      padding: 11px 14px;
+      background: rgba(244, 233, 220, 0.06);
+      border: 1px solid rgba(217, 174, 123, 0.24);
+      border-radius: 13px;
+      color: var(--cream-bg);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s ease;
     }
 
-    .dock-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 9px 15px;
-      border-radius: 999px;
-      border: none;
-      background: transparent;
-      color: var(--cream);
-      font-family: inherit;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
+    .contact-item:hover {
+      background: rgba(217, 174, 123, 0.16);
     }
 
-    .dock-btn.primary {
-      background: var(--gold);
-      color: var(--espresso-deep);
+    .contact-item svg {
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
-    .dock-btn:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
+    .footer-signoff {
+      padding-top: 14px;
+      border-top: 1px solid rgba(217, 174, 123, 0.2);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--gold);
     }
 
     /* ==========================================================================
-       MODALS / DRAWERS (DIGITAL MENU, QR CODE STUDIO, LINK EDITOR)
+       DIGITAL MENU MODAL (SLIDE-UP SHEET)
        ========================================================================== */
     .modal-backdrop {
       position: fixed;
       inset: 0;
       z-index: 200;
-      background: rgba(9, 6, 4, 0.82);
-      backdrop-filter: blur(10px);
+      background: rgba(26, 18, 13, 0.72);
+      backdrop-filter: blur(8px);
       display: none;
       align-items: flex-end;
       justify-content: center;
-      padding: 0;
     }
 
     .modal-backdrop.open {
       display: flex;
-      animation: fadeIn 0.22s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
 
     .modal-sheet {
       width: 100%;
-      max-width: 520px;
-      max-height: 88vh;
-      background: var(--espresso);
-      border-top: 2px solid var(--gold);
-      border-left: 1px solid var(--border-gold);
-      border-right: 1px solid var(--border-gold);
-      border-radius: 28px 28px 0 0;
+      max-width: 480px;
+      max-height: 86vh;
+      background: var(--cream-bg);
+      color: var(--espresso);
+      border-top: 3px solid var(--gold-deep);
+      border-radius: 26px 26px 0 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 0 -16px 50px rgba(0, 0, 0, 0.8);
-      animation: slideUp 0.28s var(--transition);
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
+      box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.35);
     }
 
     .modal-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 22px;
-      border-bottom: 1px solid var(--border-gold);
-      background: rgba(17, 11, 8, 0.6);
+      padding: 16px 20px;
+      background: var(--espresso);
+      color: var(--cream-bg);
+      border-bottom: 1px solid var(--gold);
     }
 
     .modal-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       color: var(--gold);
       text-transform: uppercase;
     }
 
     .modal-close {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid var(--border-gold);
+      border: 1px solid var(--gold);
       background: transparent;
-      color: var(--cream);
+      color: var(--cream-bg);
       cursor: pointer;
-      font-size: 18px;
-      display: grid;
-      place-items: center;
+      font-size: 15px;
     }
 
     .modal-body {
-      padding: 20px 22px 32px;
+      padding: 18px 20px 30px;
       overflow-y: auto;
     }
 
-    /* Digital Menu Styles inside Drawer */
     .menu-cat-block {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .menu-cat-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 8px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid var(--border-gold-strong);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      border-bottom: 1.5px solid var(--gold-deep);
     }
 
     .menu-cat-name {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 800;
       letter-spacing: 0.14em;
-      color: var(--gold);
+      color: var(--espresso);
     }
 
     .menu-cols-labels {
       display: flex;
-      gap: 16px;
-      font-size: 10px;
+      gap: 14px;
+      font-size: 9.5px;
       font-weight: 800;
-      letter-spacing: 0.1em;
-      color: var(--warm-beige);
+      color: var(--coffee-brown);
     }
 
     .menu-item-row {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px dashed rgba(217, 174, 123, 0.14);
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px dashed rgba(119, 88, 60, 0.25);
     }
 
     .menu-item-name {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--cream);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--espresso);
     }
 
     .menu-item-desc {
-      font-size: 11px;
-      color: var(--warm-beige);
-      opacity: 0.72;
-      margin-top: 2px;
+      font-size: 10.5px;
+      color: var(--coffee-brown);
+      margin-top: 1px;
     }
 
     .menu-item-prices {
       display: flex;
-      gap: 16px;
-      font-size: 12.5px;
+      gap: 14px;
+      font-size: 12px;
       font-weight: 800;
-      color: var(--gold-bright);
+      color: var(--espresso);
       flex-shrink: 0;
     }
 
     .menu-item-prices span {
-      min-width: 32px;
+      min-width: 28px;
       text-align: right;
-    }
-
-    /* QR Studio & Admin Editor Form Styles */
-    .qr-preview-box {
-      background: var(--cream);
-      color: var(--espresso-deep);
-      border-radius: 22px;
-      padding: 22px;
-      text-align: center;
-      max-width: 290px;
-      margin: 0 auto 20px;
-      border: 3px solid var(--gold);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    .qr-canvas-holder {
-      position: relative;
-      width: 210px;
-      height: 210px;
-      margin: 10px auto;
-      display: grid;
-      place-items: center;
-    }
-
-    .qr-canvas-holder svg {
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-    }
-
-    .qr-center-seal {
-      position: absolute;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--espresso);
-      border: 2.5px solid var(--gold);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.45);
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 11px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border-gold);
-      background: rgba(17, 11, 8, 0.85);
-      color: var(--cream);
-      font-family: inherit;
-      font-size: 12.5px;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .action-btn {
-      flex: 1;
-      min-width: 140px;
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: var(--espresso-deep);
-      font-family: inherit;
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .action-btn.secondary {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    /* Toast Notification */
-    .toast {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-80px);
-      z-index: 300;
-      background: var(--gold);
-      color: var(--espresso-deep);
-      padding: 10px 20px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s var(--transition);
-    }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-arch-frame"></div>
-  <div id="toast" class="toast">Copied to clipboard!</div>
-
-  <main class="hub-shell">
-    <!-- Top Utility Bar -->
-    <div class="top-utility-bar">
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        <span id="store-status-text">OPEN DAILY • 7:00 AM – 12:00 AM</span>
-      </div>
-      <div class="top-actions">
-        <button class="icon-btn" onclick="openModal('qr-modal')" title="Show QR Code">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        </button>
-        <button class="icon-btn" onclick="shareHub()" title="Share MAX DAILY Hub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Hero Arch Header -->
-    <section class="hero-arch-card">
-      <div class="brand-logo-wrap">
-        <!-- MAX DAILY Official Circular Fitted Seal -->
-        <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-          <circle cx="500" cy="500" r="470" fill="#1A120D"/>
-          <circle cx="500" cy="500" r="470" fill="none" stroke="#D9AE7B" stroke-width="30"/>
-          <circle cx="500" cy="500" r="432" fill="none" stroke="#F4E9DC" stroke-width="7"/>
-          <g transform="translate(472.53885,519.53476) skewX(-12) scale(0.62,1) translate(-500,-519.53476)">
-            <path fill="#F4E9DC" d="M50.48 519.53V258H111.36L219.46 435.93H187.38L292.94 258H353.83L354.46 519.53H286.31L285.68 361.66H297.34L218.57 493.79H185.74L104.56 361.66H118.63V519.53ZM388.46 519.53 503.95 258H576.83L692.43 519.53H615.65L525.3 294.16H554.34L463.99 519.53ZM451.59 468.62 470.65 414.15H598.37L617.54 468.62ZM699.66 519.53 814.03 360.58 813.77 413.3 703.72 258H787.08L857.24 359.08 821.98 359.46 890.99 258H970.82L861 410.28V358.28L976.77 519.53H891.9L820.34 413.16 854.34 412.9 784.17 519.53Z"/>
-          </g>
-          <g transform="translate(490.93488,663.86924) skewX(-12) scale(0.8,1) translate(-500,-663.86924)">
-            <path fill="#E9DDCD" d="M258.68 663.87V577.53H299.5Q313.78 577.53 324.62 582.83Q335.47 588.13 341.56 597.77Q347.65 607.41 347.65 620.7Q347.65 633.91 341.56 643.59Q335.47 653.27 324.62 658.57Q313.78 663.87 299.5 663.87ZM283.11 644.43H298.42Q305.85 644.43 311.36 641.61Q316.86 638.79 319.93 633.43Q323 628.08 323 620.7Q323 613.2 319.93 607.91Q316.86 602.62 311.36 599.8Q305.85 596.98 298.42 596.98H283.11ZM374.81 663.87 412.93 577.53H436.99L475.15 663.87H449.81L419.98 589.47H429.57L399.74 663.87ZM395.65 647.06 401.94 629.08H444.1L450.43 647.06ZM506.83 663.87V577.53H531.26V663.87ZM573.3 663.87V577.53H597.74V644.51H638.9V663.87ZM695.02 663.87V627.34L700.61 642.02 662 577.53H687.85L715.67 624.31H700.73L728.76 577.53H752.48L714.04 642.02 719.46 627.34V663.87Z"/>
-          </g>
-          <rect x="375" y="725.87" width="250" height="9" rx="4.5" fill="#D9AE7B"/>
-        </svg>
-        <div class="verified-badge" title="Verified Official Brand Hub">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-      </div>
-
-      <h1 class="brand-title" id="brand-name">MAX DAILY</h1>
+  <main class="hub-container">
+    <!-- 1. Luxury Arch Header with MAX_DAILY_vertical_stacked_cream_gold_transparent -->
+    <header class="hero-arch">
+      <svg class="stacked-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="170 210 670 380">
+        <path fill="#F4E9DC" d="M197.8155796007069 407.2853185595568V230.0H239.08966169917247L312.36157240797866 350.61473866760986H290.6153932070813L362.175557094157 230.0H403.44963919262256L403.87757589805517 407.2853185595568H357.6778981236335L357.2499614182009 300.26885959407747H365.15362761988433L311.7589637379128 389.8363771420405H289.50625505541666L234.4784371278808 300.26885959407747H244.01525737512858V407.2853185595568ZM424.39163558605 407.2853185595568 502.67657403231743 230.0H552.0814535340027L630.4449847564363 407.2853185595568H578.3938922459892L517.1478292408603 254.5146049373894H536.8329176907607L475.58685468563186 407.2853185595568ZM467.1849218125579 372.7717524783927 480.1016157517025 335.8469830834574H566.6827999637301L579.6780866790409 372.7717524783927ZM632.811030851628 407.2853185595568 710.3363672338742 299.5340459606808 710.1616952692409 335.2710844277854 635.5619701758189 230.0H692.0671017052255L739.6282215802264 298.5209869974833L715.724872439865 298.7742517382827L762.5087116801668 230.0H816.6208949416109L742.1783554005211 333.22748008908945V297.97948469128255L820.6556443820998 407.2853185595568H763.1199674771947L714.6157342882003 335.17500523931824L737.6632100176967 335.00033327468503L690.0934430157336 407.2853185595568Z"/>
+        <path fill="#D9AE7B" d="M190.8901716620674 568.8405319310039V460.4709141274238H242.13904018124254Q260.06008135649967 460.4709141274238 273.67035861610265 467.12256045496554Q287.2806358757056 473.77420678250735 294.92523967571924 485.8736992771096Q302.5698434757329 497.9731917717119 302.5698434757329 514.6557230292138Q302.5698434757329 531.2314821399746 294.92523967571924 543.3843607079475Q287.2806358757056 555.5372392759203 273.67035861610265 562.188885603462Q260.06008135649967 568.8405319310039 242.13904018124254 568.8405319310039ZM221.56513989250845 544.4383392257791H240.78306915596124Q250.10912871021102 544.4383392257791 257.01960058818656 540.8963582588833Q263.9300724661621 537.3543772919876 267.78168091249665 530.6360717859247Q271.63328935883123 523.9177662798619 271.63328935883123 514.6557230292138Q271.63328935883123 505.23886603884637 267.78168091249665 498.59796740264323Q263.9300724661621 491.9570687664401 257.01960058818656 488.4150877995443Q250.10912871021102 484.87310683264855 240.78306915596124 484.87310683264855H221.56513989250845ZM339.7623761794747 568.8405319310039 387.6157964633929 460.4709141274238H417.81563451389087L465.7170963907872 568.8405319310039H433.89970142854736L396.46167501007596 475.456014920066H408.49462578726474L371.0565993687934 568.8405319310039ZM365.9207299033222 547.743342408241 373.8163480901191 525.1722509082406H426.7410342303691L434.68469401014426 547.743342408241ZM508.5679655662763 568.8405319310039V460.4709141274238H539.2429337967174V568.8405319310039ZM595.108846069421 568.8405319310039V460.4709141274238H625.7838142998621V544.5451113725203H677.4433268509484V568.8405319310039ZM750.9903072562333 568.8405319310039V522.9941695913842L758.0050845976921 541.4119537903691L709.5429808545737 460.4709141274238H741.9903197364761L776.908687937405 519.1878424020009H758.1598983374115L793.339852424801 460.4709141274238H823.1126018883342L774.8640424386982 541.4119537903691L781.6652754866744 522.9941695913842V568.8405319310039Z"/>
+      </svg>
+      <div class="gold-divider-bar"></div>
       <p class="brand-subtitle" id="brand-subtitle">SPECIALTY COFFEE &amp; BAKERY</p>
-      <div class="brand-slogan-banner" id="brand-slogan">
+      <div class="brand-slogan-pill" id="brand-slogan">
         <span>✦</span> A DAILY DOSE OF POSITIVITY <span>✦</span>
       </div>
+    </header>
 
-      <!-- 4 Quick Action Pills -->
-      <div class="quick-pills-grid">
-        <button class="quick-pill" onclick="openModal('menu-modal')">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
-          <span>MENU</span>
-        </button>
-        <a class="quick-pill" id="quick-call" href="tel:+201000000000">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>CALL</span>
-        </a>
-        <button class="quick-pill" onclick="copyWifi()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-          <span>WI-FI</span>
-        </button>
-        <a class="quick-pill" id="quick-map" href="#location-section">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>MAP</span>
-        </a>
-      </div>
+    <!-- 2. Practical Primary Actions: Website & Digital Menu -->
+    <section class="primary-grid">
+      <a class="primary-card dark-accent" id="btn-website" href="https://maxdaily.coffee" target="_blank" rel="noopener">
+        <div class="primary-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="primary-card-title">OFFICIAL WEBSITE</div>
+        <div class="primary-card-sub">Explore Our Story</div>
+      </a>
+
+      <button class="primary-card" onclick="openMenuModal()">
+        <div class="primary-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+        </div>
+        <div class="primary-card-title">DIGITAL MENU</div>
+        <div class="primary-card-sub">Coffee &amp; Bakery</div>
+      </button>
     </section>
 
-    <!-- Google Rating & Review Spotlight -->
-    <a class="google-rate-card" id="google-review-card" href="https://search.google.com/local/writereview?placeid=MAX_DAILY_PLACE_ID" target="_blank" rel="noopener">
+    <!-- 3. Google Rating Card -->
+    <a class="google-card" id="google-review-card" href="https://search.google.com/local/writereview?placeid=MAX_DAILY_PLACE_ID" target="_blank" rel="noopener">
       <div class="google-left">
-        <div class="google-score-box">
-          <div class="google-score-num" id="google-rating-num">4.9</div>
+        <div class="google-badge-box">
+          <div class="google-score" id="google-rating-num">4.9</div>
           <div class="google-stars">★★★★★</div>
         </div>
         <div>
-          <div class="google-info-title">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 15.95 5 12c0-3.95 3.36-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg>
-            <span id="google-cta-title">LOVE YOUR DAILY DOSE?</span>
-          </div>
-          <div class="google-info-sub" id="google-cta-subtitle">Tap to rate us 5 stars on Google Maps (280+ Reviews)</div>
+          <div class="google-title" id="google-cta-title">GOOGLE RATING &amp; REVIEWS</div>
+          <div class="google-sub" id="google-cta-subtitle">Tap to rate your experience on Google</div>
         </div>
       </div>
-      <div class="google-cta-badge">RATE US ★</div>
+      <div class="google-btn">RATE US ★</div>
     </a>
 
-    <!-- Websites & Digital Menu Links -->
-    <div class="section-header">
-      <span class="section-header-title">WEBSITES &amp; DIGITAL MENU</span>
-      <span class="section-header-line"></span>
+    <!-- 4. Social Media (Instagram, TikTok, Facebook) -->
+    <div class="section-label">
+      <span>FOLLOW MAX DAILY</span>
     </div>
-    <div class="links-stack" id="websites-container"></div>
+    <section class="social-list" id="socials-container"></section>
 
-    <!-- Social Media Channels -->
-    <div class="section-header">
-      <span class="section-header-title">OFFICIAL SOCIAL MEDIA</span>
-      <span class="section-header-line"></span>
-    </div>
-    <div class="links-stack" id="socials-container"></div>
-
-    <!-- Location & Google Maps Card -->
-    <div class="section-header" id="location-section">
-      <span class="section-header-title">LOCATION &amp; DIRECTIONS</span>
-      <span class="section-header-line"></span>
-    </div>
-    <div class="location-card">
-      <div class="map-visual-banner">
-        <div class="map-road-1"></div>
-        <div class="map-road-2"></div>
-        <div class="map-pin-badge">
-          <span class="map-pin-pulse"></span>
-          <span class="map-pin-text" id="map-pin-label">MAX DAILY • FLAGSHIP</span>
-        </div>
-      </div>
-      <div class="location-body">
-        <div class="location-branch-title" id="location-branch">MAX DAILY — Specialty Coffee &amp; Bakery</div>
-        <div class="location-address" id="location-address">Specialty Coffee District, Main Boulevard • Cairo, Egypt</div>
-        <div class="location-meta-row">
-          <span id="location-hours">🕒 Daily: 07:00 AM – 12:00 AM</span>
-          <span id="location-phone">📞 +20 100 000 0000</span>
-        </div>
-        <a class="directions-btn" id="location-map-btn" href="https://maps.google.com/?q=MAX+DAILY+Specialty+Coffee+and+Bakery" target="_blank" rel="noopener">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-          <span>OPEN IN GOOGLE MAPS</span>
+    <!-- 5. Contact & Location Listed in the Footer -->
+    <footer class="contact-footer">
+      <div class="footer-header">CONTACT &amp; LOCATION</div>
+      <div class="contact-list">
+        <a class="contact-item" id="footer-map" href="https://maps.google.com/?q=MAX+DAILY+Specialty+Coffee+and+Bakery" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="contact-address">Specialty Coffee District, Main Boulevard, Cairo</span>
         </a>
+        <a class="contact-item" id="footer-phone" href="tel:+201000000000">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span id="contact-phone">+20 100 000 0000</span>
+        </a>
+        <a class="contact-item" id="footer-whatsapp" href="https://wa.me/201000000000" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>WhatsApp Direct Order &amp; Support</span>
+        </a>
+        <div class="contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="contact-hours">Open Daily: 07:00 AM – 12:00 AM</span>
+        </div>
       </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="hub-footer">
-      <div class="footer-slogan">BUT FIRST, MAX DAILY.</div>
-      <div class="footer-copy">© 2026 MAX DAILY — Specialty Coffee &amp; Bakery. All Rights Reserved.</div>
+      <div class="footer-signoff">BUT FIRST, MAX DAILY.</div>
     </footer>
   </main>
 
-  <!-- Floating Bottom Dock -->
-  <nav class="floating-dock">
-    <button class="dock-btn primary" onclick="openModal('menu-modal')">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
-      <span>DIGITAL MENU</span>
-    </button>
-    <button class="dock-btn" onclick="openModal('qr-modal')">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-      <span>QR &amp; EDIT LINKS</span>
-    </button>
-  </nav>
-
-  <!-- ==========================================================================
-       MODAL 1: FULL INTERACTIVE DIGITAL MENU
-       ========================================================================== -->
-  <div class="modal-backdrop" id="menu-modal" onclick="closeModalOnBackdrop(event, 'menu-modal')">
+  <!-- Digital Menu Modal -->
+  <div class="modal-backdrop" id="menu-modal" onclick="if(event.target.id==='menu-modal')closeMenuModal()">
     <div class="modal-sheet">
       <div class="modal-header">
-        <span class="modal-title">☕ MAX DAILY — DIGITAL MENU</span>
-        <button class="modal-close" onclick="closeModal('menu-modal')">✕</button>
+        <span class="modal-title">☕ MAX DAILY — MENU</span>
+        <button class="modal-close" onclick="closeMenuModal()">✕</button>
       </div>
       <div class="modal-body" id="menu-modal-content"></div>
     </div>
   </div>
 
-  <!-- ==========================================================================
-       MODAL 2: LIVE QR CODE GENERATOR & LINK EDITOR STUDIO
-       ========================================================================== -->
-  <div class="modal-backdrop" id="qr-modal" onclick="closeModalOnBackdrop(event, 'qr-modal')">
-    <div class="modal-sheet">
-      <div class="modal-header">
-        <span class="modal-title">⚡ QR STUDIO &amp; LINK CUSTOMIZER</span>
-        <button class="modal-close" onclick="closeModal('qr-modal')">✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="qr-preview-box">
-          <div style="font-size:11px;font-weight:900;letter-spacing:0.18em;color:#1A120D;">MAX DAILY</div>
-          <div style="font-size:8.5px;font-weight:700;letter-spacing:0.16em;color:#77583C;margin-bottom:4px;">SPECIALTY COFFEE &amp; BAKERY</div>
-          <div class="qr-canvas-holder">
-            <div id="live-qr-svg-container" style="width:100%;height:100%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" width="100%" height="100%"><rect width="210" height="210" fill="#F4E9DC"/><rect x="6" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/></svg></div>
-            <div class="qr-center-seal">
-              <span style="font-size:9px;font-weight:900;color:#F4E9DC;letter-spacing:0.06em;line-height:1.05;">MAX<br><span style="color:#D9AE7B;font-size:7px;">DAILY</span></span>
-            </div>
-          </div>
-          <div style="font-size:9px;font-weight:800;letter-spacing:0.14em;color:#1A120D;">A DAILY DOSE OF POSITIVITY</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">QR Code Destination URL (Your Free Hosted Dashboard Link)</label>
-          <input type="text" id="input-qr-url" class="form-input" value="https://mohamedeltelemy.github.io/maxdaily/" oninput="updateLiveQR()" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Official Website URL</label>
-          <input type="text" id="input-web-url" class="form-input" value="https://maxdaily.coffee" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Instagram URL</label>
-          <input type="text" id="input-ig-url" class="form-input" value="https://instagram.com/maxdaily.coffee" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">TikTok URL</label>
-          <input type="text" id="input-tt-url" class="form-input" value="https://tiktok.com/@maxdaily.coffee" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Facebook URL</label>
-          <input type="text" id="input-fb-url" class="form-input" value="https://facebook.com/maxdaily.coffee" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Google Review Link</label>
-          <input type="text" id="input-google-review" class="form-input" value="https://search.google.com/local/writereview?placeid=MAX_DAILY_PLACE_ID" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Google Maps Location Link</label>
-          <input type="text" id="input-google-map" class="form-input" value="https://maps.google.com/?q=MAX+DAILY+Specialty+Coffee+and+Bakery" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Add a Custom Link Button (Title + URL)</label>
-          <div style="display:flex;gap:8px;">
-            <input type="text" id="new-link-title" class="form-input" placeholder="e.g. Talabat Delivery" />
-            <input type="text" id="new-link-url" class="form-input" placeholder="https://..." />
-          </div>
-        </div>
-
-        <div class="btn-row">
-          <button class="action-btn" onclick="applyCustomLinks()">Save &amp; Update Dashboard</button>
-          <button class="action-btn secondary" onclick="downloadUpdatedConfig()">Export hub_config.json</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Default Embedded Config (Also fetches hub_config.json dynamically when hosted)
     let HUB_DATA = {
       brand: {
         name: "MAX DAILY",
         subtitle: "SPECIALTY COFFEE & BAKERY",
         slogan: "A DAILY DOSE OF POSITIVITY",
-        open_status: "OPEN DAILY • 7:00 AM – 12:00 AM",
-        qr_target_url: "https://mohamedeltelemy.github.io/maxdaily/"
+        website_url: "https://maxdaily.coffee"
       },
       google_review: {
         rating: "4.9",
-        review_count: "280+",
-        cta_title: "LOVE YOUR DAILY DOSE?",
-        cta_subtitle: "Tap to rate us 5 stars on Google Maps (280+ Reviews)",
+        cta_title: "GOOGLE RATING & REVIEWS",
+        cta_subtitle: "Tap to rate your experience on Google",
         review_url: "https://search.google.com/local/writereview?placeid=MAX_DAILY_PLACE_ID"
       },
-      location: {
-        branch_name: "MAX DAILY — Specialty Coffee & Bakery",
-        address_line_1: "Specialty Coffee District, Main Boulevard",
-        address_line_2: "Cairo, Egypt",
-        hours: "Daily: 07:00 AM – 12:00 AM",
-        phone: "+20 100 000 0000",
-        whatsapp: "https://wa.me/201000000000?text=Hello%20MAX%20DAILY!",
-        google_maps_url: "https://maps.google.com/?q=MAX+DAILY+Specialty+Coffee+and+Bakery"
-      },
-      wifi: {
-        network_name: "MAX_DAILY_GUEST",
-        password: "POSITIVITY2026"
-      },
-      websites: [
-        {
-          id: "official_website",
-          title: "OFFICIAL WEBSITE",
-          subtitle: "Explore our story, specialty beans & branches",
-          url: "https://maxdaily.coffee",
-          badge: "WEB",
-          featured: true,
-          icon: "globe"
-        },
-        {
-          id: "digital_menu",
-          title: "INTERACTIVE DIGITAL MENU",
-          subtitle: "Espresso, Signatures, Manual Brew & Bakery",
-          url: "#menu-drawer",
-          badge: "MENU",
-          featured: true,
-          icon: "coffee"
-        },
-        {
-          id: "whatsapp_order",
-          title: "ORDER VIA WHATSAPP",
-          subtitle: "Fast pickup, takeaway & whole bean orders",
-          url: "https://wa.me/201000000000?text=Hello%20MAX%20DAILY!%20I%20would%20like%20to%20order:",
-          badge: "PICKUP",
-          featured: false,
-          icon: "whatsapp"
-        }
-      ],
       social_media: [
         {
           id: "instagram",
           platform: "Instagram",
           handle: "@maxdaily.coffee",
-          subtitle: "Daily pours, fresh bakes & community moments",
           url: "https://instagram.com/maxdaily.coffee",
           icon: "instagram"
         },
@@ -1285,7 +675,6 @@
           id: "tiktok",
           platform: "TikTok",
           handle: "@maxdaily.coffee",
-          subtitle: "Behind the bar & specialty coffee craft",
           url: "https://tiktok.com/@maxdaily.coffee",
           icon: "tiktok"
         },
@@ -1293,11 +682,18 @@
           id: "facebook",
           platform: "Facebook",
           handle: "/maxdaily.coffee",
-          subtitle: "Events, announcements & branch updates",
           url: "https://facebook.com/maxdaily.coffee",
           icon: "facebook"
         }
       ],
+      location: {
+        address_line_1: "Specialty Coffee District, Main Boulevard",
+        address_line_2: "Cairo, Egypt",
+        hours: "Open Daily: 07:00 AM – 12:00 AM",
+        phone: "+20 100 000 0000",
+        whatsapp: "https://wa.me/201000000000?text=Hello%20MAX%20DAILY!",
+        google_maps_url: "https://maps.google.com/?q=MAX+DAILY+Specialty+Coffee+and+Bakery"
+      },
       menu_categories: [
         {
           id: "signatures",
@@ -1307,8 +703,7 @@
             { name: "MAX DAILY SIGNATURE", desc: "Salted caramel, roasted hazelnut & double shot", prices: ["125", "135"] },
             { name: "PISTACHIO VELVET LATTE", desc: "House pistachio cream & double espresso", prices: ["135", "145"] },
             { name: "SPANISH LATTE", desc: "Sweetened condensed milk & double espresso", prices: ["115", "125"] },
-            { name: "WHITE MOCHA BREW", desc: "Belgian white chocolate & rich espresso", prices: ["115", "125"] },
-            { name: "ESPRESSO TONIC / CITRUS", desc: "Sparkling botanical tonic, orange zest & shot", prices: ["—", "125"] }
+            { name: "WHITE MOCHA BREW", desc: "Belgian white chocolate & rich espresso", prices: ["115", "125"] }
           ]
         },
         {
@@ -1324,17 +719,6 @@
           ]
         },
         {
-          id: "brew_frappe",
-          title: "MANUAL BREW & FRAPPE",
-          columns: ["REG", "LRG"],
-          items: [
-            { name: "V60 POUR OVER", desc: "Hand-poured single-origin specialty filter", prices: ["120", "130"] },
-            { name: "COLD BREW (18H)", desc: "Slow-steeped small batch specialty roast", prices: ["—", "115"] },
-            { name: "CARAMEL ESPRESSO FRAPPE", desc: "Blended ice, double espresso & buttery caramel", prices: ["115", "130"] },
-            { name: "LOTUS BISCOFF FRAPPE", desc: "Creamy caramelized biscuit blend & espresso", prices: ["125", "140"] }
-          ]
-        },
-        {
           id: "bakery_sweets",
           title: "BAKERY & SWEETS",
           columns: ["PRICE"],
@@ -1342,96 +726,59 @@
             { name: "FRENCH BUTTER CROISSANT", desc: "Flaky golden-baked laminated pastry", prices: ["85"] },
             { name: "PISTACHIO CROISSANT", desc: "Twice-baked with house frangipane cream", prices: ["115"] },
             { name: "SAN SEBASTIAN CHEESECAKE", desc: "Creamy Basque cheesecake + warm chocolate", prices: ["140"] },
-            { name: "ESPRESSO FUDGE BROWNIE", desc: "Rich dark chocolate chunk with sea salt", prices: ["95"] },
-            { name: "CINNAMON BRIOCHE ROLL", desc: "Warm swirled brioche with cream cheese glaze", prices: ["105"] }
+            { name: "ESPRESSO FUDGE BROWNIE", desc: "Rich dark chocolate chunk with sea salt", prices: ["95"] }
           ]
         }
       ]
     };
 
-    const ICONS = {
-      globe: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
-      coffee: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>`,
-      whatsapp: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
-      instagram: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`,
-      tiktok: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>`,
-      facebook: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`
+    const SOCIAL_ICONS = {
+      instagram: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`,
+      tiktok: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>`,
+      facebook: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`
     };
 
     function renderHub() {
-      // Brand Header
-      document.getElementById('brand-name').textContent = HUB_DATA.brand.name;
       document.getElementById('brand-subtitle').textContent = HUB_DATA.brand.subtitle;
       document.getElementById('brand-slogan').innerHTML = `<span>✦</span> ${HUB_DATA.brand.slogan} <span>✦</span>`;
-      document.getElementById('store-status-text').textContent = HUB_DATA.brand.open_status;
+      if (HUB_DATA.websites && HUB_DATA.websites[0]) {
+        document.getElementById('btn-website').href = HUB_DATA.websites[0].url;
+      } else if (HUB_DATA.brand.website_url) {
+        document.getElementById('btn-website').href = HUB_DATA.brand.website_url;
+      }
 
-      // Google Review Card
       document.getElementById('google-rating-num').textContent = HUB_DATA.google_review.rating;
-      document.getElementById('google-cta-title').textContent = HUB_DATA.google_review.cta_title;
-      document.getElementById('google-cta-subtitle').textContent = HUB_DATA.google_review.cta_subtitle;
       document.getElementById('google-review-card').href = HUB_DATA.google_review.review_url;
 
-      // Websites Stack
-      const webContainer = document.getElementById('websites-container');
-      webContainer.innerHTML = HUB_DATA.websites.map(item => {
-        const isMenu = item.url === '#menu-drawer';
-        const clickAttr = isMenu ? `onclick="openModal('menu-modal'); return false;" href="#menu"` : `href="${item.url}" target="_blank" rel="noopener"`;
-        return `
-          <a class="link-card ${item.featured ? 'featured' : ''}" ${clickAttr}>
-            <div class="link-card-left">
-              <div class="link-icon-circle">${ICONS[item.icon] || ICONS.globe}</div>
-              <div class="link-text-wrap">
-                <div class="link-title-row">
-                  <span class="link-title">${item.title}</span>
-                  ${item.badge ? `<span class="link-badge">${item.badge}</span>` : ''}
-                </div>
-                <div class="link-subtitle">${item.subtitle}</div>
-              </div>
-            </div>
-            <div class="link-arrow">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
-          </a>
-        `;
-      }).join('');
-
-      // Social Media Stack
       const socialContainer = document.getElementById('socials-container');
       socialContainer.innerHTML = HUB_DATA.social_media.map(soc => `
-        <a class="link-card" href="${soc.url}" target="_blank" rel="noopener">
-          <div class="link-card-left">
-            <div class="link-icon-circle">${ICONS[soc.icon] || ICONS.globe}</div>
-            <div class="link-text-wrap">
-              <div class="link-title-row">
-                <span class="link-title">${soc.platform.toUpperCase()}</span>
-                <span class="link-badge">${soc.handle}</span>
-              </div>
-              <div class="link-subtitle">${soc.subtitle}</div>
+        <a class="social-row" href="${soc.url}" target="_blank" rel="noopener">
+          <div class="social-left">
+            <div class="social-icon">${SOCIAL_ICONS[soc.icon] || SOCIAL_ICONS.instagram}</div>
+            <div>
+              <div class="social-name">${soc.platform}</div>
+              <div class="social-handle">${soc.handle}</div>
             </div>
           </div>
-          <div class="link-arrow">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </div>
+          <div class="social-arrow">→</div>
         </a>
       `).join('');
 
-      // Location Section
-      document.getElementById('location-branch').textContent = HUB_DATA.location.branch_name;
-      document.getElementById('location-address').textContent = `${HUB_DATA.location.address_line_1} • ${HUB_DATA.location.address_line_2}`;
-      document.getElementById('location-hours').textContent = `🕒 ${HUB_DATA.location.hours}`;
-      document.getElementById('location-phone').textContent = `📞 ${HUB_DATA.location.phone}`;
-      document.getElementById('location-map-btn').href = HUB_DATA.location.google_maps_url;
-      document.getElementById('quick-call').href = `tel:${HUB_DATA.location.phone.replace(/\s+/g, '')}`;
+      document.getElementById('contact-address').textContent = `${HUB_DATA.location.address_line_1}, ${HUB_DATA.location.address_line_2}`;
+      document.getElementById('contact-phone').textContent = HUB_DATA.location.phone;
+      document.getElementById('contact-hours').textContent = HUB_DATA.location.hours;
+      document.getElementById('footer-map').href = HUB_DATA.location.google_maps_url;
+      document.getElementById('footer-phone').href = `tel:${HUB_DATA.location.phone.replace(/\s+/g, '')}`;
+      if (HUB_DATA.location.whatsapp) {
+        document.getElementById('footer-whatsapp').href = HUB_DATA.location.whatsapp;
+      }
 
-      // Digital Menu Modal
       const menuContent = document.getElementById('menu-modal-content');
       menuContent.innerHTML = HUB_DATA.menu_categories.map(cat => `
         <div class="menu-cat-block">
           <div class="menu-cat-header">
             <span class="menu-cat-name">${cat.title}</span>
-            <div class="menu-cols-labels">
-              ${cat.columns.map(c => `<span>${c}</span>`).join('')}
-            </div>
+            <div class="menu-cols-labels">${cat.columns.map(c => `<span>${c}</span>`).join('')}</div>
           </div>
           ${cat.items.map(item => `
             <div class="menu-item-row">
@@ -1439,111 +786,25 @@
                 <div class="menu-item-name">${item.name}</div>
                 <div class="menu-item-desc">${item.desc}</div>
               </div>
-              <div class="menu-item-prices">
-                ${item.prices.map(p => `<span>${p}</span>`).join('')}
-              </div>
+              <div class="menu-item-prices">${item.prices.map(p => `<span>${p}</span>`).join('')}</div>
             </div>
           `).join('')}
         </div>
       `).join('');
     }
 
-    function openModal(id) {
-      document.getElementById(id).classList.add('open');
-      if (id === 'qr-modal') updateLiveQR();
+    function openMenuModal() {
+      document.getElementById('menu-modal').classList.add('open');
     }
 
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('open');
+    function closeMenuModal() {
+      document.getElementById('menu-modal').classList.remove('open');
     }
 
-    function closeModalOnBackdrop(e, id) {
-      if (e.target.id === id) closeModal(id);
-    }
-
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 2600);
-    }
-
-    function copyWifi() {
-      const pass = HUB_DATA.wifi.password;
-      navigator.clipboard?.writeText(pass);
-      showToast(`Wi-Fi (${HUB_DATA.wifi.network_name}) Password Copied: ${pass}`);
-    }
-
-    function shareHub() {
-      const shareUrl = window.location.href.startsWith('http') ? window.location.href : HUB_DATA.brand.qr_target_url;
-      if (navigator.share) {
-        navigator.share({
-          title: 'MAX DAILY — Specialty Coffee & Bakery',
-          text: 'MAX DAILY — A Daily Dose of Positivity',
-          url: shareUrl
-        });
-      } else {
-        navigator.clipboard?.writeText(shareUrl);
-        showToast('Hub Link Copied to Clipboard!');
-      }
-    }
-
-    const EMBEDDED_QR_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" width="100%" height="100%"><rect width="210" height="210" fill="#F4E9DC"/><rect x="6" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="6" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="12" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="18" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="24" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="30" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="36" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="42" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="48" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="54" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="60" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="66" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="72" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="78" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="84" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="90" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="96" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="102" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="108" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="114" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="120" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="126" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="132" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="138" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="144" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="48" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="150" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="120" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="156" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="162" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="168" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="174" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="114" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="198" y="180" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="72" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="102" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="186" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="78" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="90" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="132" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="156" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="162" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="174" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="186" y="192" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="6" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="12" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="18" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="24" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="30" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="36" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="42" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="54" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="60" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="66" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="84" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="96" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="108" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="126" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="138" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="144" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="150" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="168" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="180" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/><rect x="192" y="198" width="6" height="6" rx="1.5" fill="#1A120D"/></svg>`;
-    function updateLiveQR() {
-      const url = document.getElementById('input-qr-url').value.trim() || 'https://mohamedeltelemy.github.io/maxdaily/';
-      const container = document.getElementById('live-qr-svg-container');
-      if (url === 'https://mohamedeltelemy.github.io/maxdaily/' || !url) {
-        container.innerHTML = EMBEDDED_QR_SVG;
-      } else {
-        container.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(url) + '&color=1a120d&bgcolor=f4e9dc" style="width:100%;height:100%;border-radius:12px;" alt="QR Code" />';
-      }
-    }
-
-    function applyCustomLinks() {
-      HUB_DATA.brand.qr_target_url = document.getElementById('input-qr-url').value.trim();
-      HUB_DATA.websites[0].url = document.getElementById('input-web-url').value.trim();
-      HUB_DATA.social_media[0].url = document.getElementById('input-ig-url').value.trim();
-      HUB_DATA.social_media[1].url = document.getElementById('input-tt-url').value.trim();
-      HUB_DATA.social_media[2].url = document.getElementById('input-fb-url').value.trim();
-      HUB_DATA.google_review.review_url = document.getElementById('input-google-review').value.trim();
-      HUB_DATA.location.google_maps_url = document.getElementById('input-google-map').value.trim();
-
-      const customTitle = document.getElementById('new-link-title').value.trim();
-      const customUrl = document.getElementById('new-link-url').value.trim();
-      if (customTitle && customUrl) {
-        HUB_DATA.websites.push({
-          id: 'custom_' + Date.now(),
-          title: customTitle.toUpperCase(),
-          subtitle: customUrl.replace(/^https?:\/\//, ''),
-          url: customUrl,
-          badge: 'NEW',
-          featured: false,
-          icon: 'globe'
-        });
-        document.getElementById('new-link-title').value = '';
-        document.getElementById('new-link-url').value = '';
-      }
-
-      renderHub();
-      updateLiveQR();
-      showToast('Dashboard Links Updated!');
-    }
-
-    function downloadUpdatedConfig() {
-      applyCustomLinks();
-      const blob = new Blob([JSON.stringify(HUB_DATA, null, 2)], { type: 'application/json' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'hub_config.json';
-      a.click();
-    }
-
-    // 1. Render immediately from embedded data (Zero load delay, works 100% offline)
     renderHub();
 
-    // 2. Asynchronously sync hub_config.json if served over HTTP/HTTPS
     if (window.location.protocol.startsWith('http')) {
-      fetch('./hub_config.json')
+      fetch('./hub_config.json?t=' + Date.now())
         .then(r => r.ok ? r.json() : null)
         .then(data => {
           if (data) {
